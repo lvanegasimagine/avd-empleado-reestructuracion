@@ -2,18 +2,20 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PagesRoutingModule } from './pages-routing.module';
-import { MainComponent } from './main.component';
-import { RouterModule } from '@angular/router';
+import { MainPagesComponent } from './pages/main-pages/main-pages.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 
 @NgModule({
   declarations: [
-    MainComponent
+    MainPagesComponent,
+    NavbarComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,
-    PagesRoutingModule,
-    RouterModule
+    PagesRoutingModule
   ]
 })
 export class PagesModule { }
