@@ -11,8 +11,8 @@ export class SidebarService {
       titulo: 'Empleados',
       icono: 'fas fa-database',
       submenu: [
-        { titulo: 'Listado', url: 'dashboard/listado' },
-        { titulo: 'Tabla', url: 'dashboard/tabla' }
+        { titulo: 'Listado', url: '/dashboard/listado' },
+        { titulo: 'Tabla', url: '/dashboard/tabla' }
       ]
     },
   ];

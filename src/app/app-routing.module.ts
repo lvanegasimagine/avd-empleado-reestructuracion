@@ -11,7 +11,7 @@ const routes: Routes = [
      loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule),
      // runGuardsAndResolvers: 'always'
     },
-    { path: '**', redirectTo: 'auth'}
+    // { path: '**', redirectTo: 'auth'}
 ];
 
 @NgModule({
