@@ -6,6 +6,7 @@ import { MainPagesComponent } from './pages/main-pages/main-pages.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MainPagesComponent,
     NavbarComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,
