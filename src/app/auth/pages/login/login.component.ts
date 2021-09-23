@@ -1,5 +1,5 @@
 import { PlatformLocation } from '@angular/common';
-import { Component, NgZone, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -9,24 +9,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute,
-    public router: Router,
-    private platformLocation: PlatformLocation,
-    private ngZone: NgZone) { }
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
   }
 
   login(){
-    // this.router.navigateByUrl('/dashboard', {skipLocationChange: true}).then(()=>
-    // this.router.navigate(["/dashboard"]));
-    //   this.router.navigateByUrl('/dashboard');
-    // this.platformLocation.onPopState(() => {
-    //   if(this.platformLocation.pathname.startsWith("/dashboard")) {
-    //       this.ngZone.run(() => {
-    //           console.log("Reloading component");
-    //       });
-    //   }
-    // });
+    this.router.navigateByUrl('/dashboard').then(() => {
+        window.location.reload();
+    }).catch(() => {
+      this.router.navigateByUrl('/auth/login');
+    });
   }
 }

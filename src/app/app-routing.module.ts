@@ -7,15 +7,15 @@ const routes: Routes = [
       loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
     },
     {
-      path: 'dashboard',
-      loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule),
-      runGuardsAndResolvers: 'always'
+     path: 'dashboard',
+     loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule),
+     // runGuardsAndResolvers: 'always'
     },
-    { path: '**', redirectTo: 'auth'}
+    // { path: '**', redirectTo: 'auth'}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,  {preloadingStrategy: PreloadAllModules})],
+  imports: [RouterModule.forRoot(routes,{ onSameUrlNavigation: 'reload' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
