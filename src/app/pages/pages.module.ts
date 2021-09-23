@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
-import { PagesRoutingModule } from './pages-routing.module';
 import { MainPagesComponent } from './pages/main-pages.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { EmpleadoComponent } from './pages/empleado/empleado.component';
-import { MaterialModule } from './material.module';
 import { ListadoEmpleadoComponent } from './pages/empleado/listado-empleado/listado-empleado.component';
 import { ReporteEmpleadoComponent } from './pages/empleado/reporte-empleado/reporte-empleado.component';
 
+import { PagesRoutingModule } from './pages-routing.module';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { ReporteEmpleadoComponent } from './pages/empleado/reporte-empleado/repo
     CommonModule,
     MaterialModule,
     PagesRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ]
 })
 export class PagesModule { }
