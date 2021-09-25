@@ -14,7 +14,7 @@ export class ListadoEmpleadoComponent implements AfterViewInit, OnInit {
   displayedColumns: string[] = ['nombre','inss','celular','cargo','area','tools'];
   dataSource = new MatTableDataSource<any>(this.empleadoList);
   
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
   
   constructor(private empleadoService: EmpleadoService) {
   }
@@ -30,7 +30,7 @@ export class ListadoEmpleadoComponent implements AfterViewInit, OnInit {
 
 
   listarEmpleado(){
-    this.empleadoService.getEmpleadoList().subscribe(resp => {
+    this.empleadoService.getEmpleadoList().subscribe((resp: any) => {
       this.dataSource.data = resp['data'];
     })
   };
