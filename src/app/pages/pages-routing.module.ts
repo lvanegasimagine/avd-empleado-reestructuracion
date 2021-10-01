@@ -17,6 +17,7 @@ const routes: Routes = [
        { path: 'empleado/actualizar/:id', component: EmpleadoComponent },
        { path: 'reporte/:id', component: ReporteEmpleadoComponent},
     ]
+    
   },
 ];
 

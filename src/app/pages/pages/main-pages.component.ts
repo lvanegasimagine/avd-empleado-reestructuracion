@@ -1,5 +1,6 @@
 
 import { Component} from '@angular/core';
+import { AuthService } from '../../auth/services/auth.service';
 
 @Component({
   selector: 'app-main-pages',
@@ -8,5 +9,16 @@ import { Component} from '@angular/core';
 })
 export class MainPagesComponent {
 
+  get usuario(){
+    return this.authService.usuario;
+  }
+
+  /**
+   *
+   */
+  constructor(private authService:AuthService) {
+    
+    
+  }
   
 }
