@@ -22,15 +22,14 @@ export class LoginComponent {
 
     const {email, password} = this.loginForm.value;
 
-    this.authService.login(email, password).subscribe(resp => {
-      console.log(resp);
-    })
-
-
-    // this.router.navigateByUrl('/dashboard').then(() => {
-    //     window.location.reload();
-    // }).catch(() => {
-    //   this.router.navigateByUrl('/auth/login');
-    // });
+    this.authService.login(email, password).subscribe(ok => {
+      if(ok){
+        this.router.navigateByUrl('/dashboard').then(() => {
+            window.location.reload();
+        }).catch(() => {
+          this.router.navigateByUrl('/auth/login');
+        });
+      }
+    });
   }
 }
