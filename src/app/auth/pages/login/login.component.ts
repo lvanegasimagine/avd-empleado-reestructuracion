@@ -32,7 +32,7 @@ export class LoginComponent {
           this.router.navigateByUrl('/auth/login');
         });
       }else{
-        Swal.fire('Uupss', ok, 'error')
+        Swal.fire('Oopss 😕', ok, 'error')
       }
     });
   }
