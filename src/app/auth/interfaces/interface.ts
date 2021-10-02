@@ -3,6 +3,11 @@ export interface AuthResponse{
   uid?: string,
   nombre?: string,
   email?: string,
+  password?: string,
+  direccion?: string,
+  departamento?: string,
+  celular?: string,
+  isAdmin?: string,
   token?: string,
   msg?: string,
 }
