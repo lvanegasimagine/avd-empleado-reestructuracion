@@ -120,6 +120,12 @@ button:hover {
   overflow: hidden;
 }
 
+.wrap-register100 {
+  width: 900px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
 
 /*------------------------------------------------------------------
 [ Form ]*/

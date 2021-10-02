@@ -1,45 +1,84 @@
-
 <div class="limiter">
     <div class="container-login100" style="background-image: url('../../../../assets/img/bg-01.jpg');">
-        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+        <div class="wrap-register100 p-l-55 p-r-55 p-t-65 p-b-54">
             <form class="login100-form" autocomplete="off" [formGroup]="registroForm" (ngSubmit)="login()">
-                
                 <span class="login100-form-title p-b-49">
                     Login
                 </span>
-
-                <div class="wrap-input100 m-b-23">
-                    <span class="label-input100">Email</span>
-                    <input class="input100"
-                           type="email" 
-                           formControlName="email"
-                           placeholder="Ingrese su email">
-                    <span class="focus-input100"></span>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="wrap-input100 m-b-23">
+                            <span class="label-input100">Email</span>
+                            <input class="input100"
+                                   type="email" 
+                                   formControlName="email"
+                                   placeholder="Ingrese su email">
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="wrap-input100 mt-5">
+                            <span class="label-input100">Departamento</span>
+                            <input  class="input100"
+                                    type="text"
+                                    formControlName="departamento"
+                                    placeholder="Ingrese su departamento">
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="wrap-input100 mt-5">
+                            <span class="label-input100">Direccion</span>
+                            <input class="input100"
+                                   type="text"
+                                   formControlName="direccion"
+                                   placeholder="Ingrese su dirección">
+                            <span class="focus-input100"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="wrap-input100 m-b-23">
+                            <span class="label-input100">Password</span>
+                            <input class="input100"
+                                   type="password"
+                                   formControlName="password"
+                                   placeholder="Ingrese su contraseña">
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="wrap-input100 mt-5">
+                            <span class="label-input100">Celular</span>
+                            <input class="input100"
+                                   type="number"
+                                   formControlName="celular"
+                                   placeholder="Ingrese su N° Celular">
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="mt-5">
+                            <span class="label-input100">Privilegio</span>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="container-login100-form-btn mt-5">
+                                        <div class="wrap-login100-form-btn">
+                                            <div class="login100-form-bgbtn"></div>
+                                            <button class="login100-form-btn" type="button" (click)="role = true">
+                                                Admin
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="container-login100-form-btn mt-5">
+                                        <div class="wrap-login100-form-btn">
+                                            <div class="login100-form-bgbtn"></div>
+                                            <button class="login100-form-btn" type="button" (click)="role = false">
+                                                User
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="focus-input100"></span>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="wrap-input100 mt-5">
-                    <span class="label-input100">Password</span>
-                    <input class="input100"
-                           type="password"
-                           formControlName="password"
-                           placeholder="Ingrese su contraseña">
-                    <span class="focus-input100"></span>
-                </div>
-                <div class="wrap-input100 mt-5">
-                    <span class="label-input100">Direccion</span>
-                    <input class="input100"
-                           type="text"
-                           formControlName="direccion"
-                           placeholder="Ingrese su dirección">
-                    <span class="focus-input100"></span>
-                </div>
-                <div class="wrap-input100 mt-5">
-                    <span class="label-input100">Departamento</span>
-                    <input class="input100"
-                           type="text"
-                           formControlName="departamento"
-                           placeholder="Ingrese su departamento">
-                    <span class="focus-input100"></span>
+                <!-- <div class="wrap-input100 mt-5">
+                    
                 </div>
                 <div class="wrap-input100 mt-5">
                     <span class="label-input100">Celular</span>
@@ -74,14 +113,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <input class="input100"
-                           type="number"
-                           formControlName="isAdmin"
-                           maxlength="1"
-                           placeholder="Ingrese su contraseña"> -->
                     <span class="focus-input100"></span>
                 </div>
-                <div class="text-right p-t-8 p-b-31"></div>
+                <div class="text-right p-t-8 p-b-31"></div> -->
 
                 <div class="container-login100-form-btn mt-5">
                     <div class="wrap-login100-form-btn">

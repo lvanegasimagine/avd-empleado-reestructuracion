@@ -49,7 +49,7 @@ export class EmpleadoComponent implements OnInit {
         });// Finaliza el patchvalue
         this.formEmpleado.setControl('hijos', this.setGetHijos(empleadoUpdate.hijos));
         this.formEmpleado.setControl('laboral', this.setGetLaboral(empleadoUpdate.laboral));
-        this.formEmpleado.setControl('referencia', this.setGetReferencia(empleadoUpdate.referencias));
+        this.formEmpleado.setControl('referencias', this.setGetReferencia(empleadoUpdate.referencias));
       })
     }
   }// Fin ngOnInit
@@ -80,10 +80,10 @@ export class EmpleadoComponent implements OnInit {
     return formArray
   }
 
-  setGetReferencia(referencia: any): FormArray{
+  setGetReferencia(referencias: any): FormArray{
 
     const formArray = new FormArray([]);
-    referencia.forEach(s => {
+    referencias.forEach(s => {
       formArray.push(this.fb.group({
         nombre: s.nombre,
         apellido: s.apellido,
@@ -134,7 +134,7 @@ export class EmpleadoComponent implements OnInit {
       estudios: ['', [Validators.required, Validators.maxLength(100)]],
       fechaInicio: ['', [Validators.required, Validators.maxLength(100)]],
       laboral: this.fb.array([this.createLaboral()],Validators.required),
-      referencia: this.fb.array([this.createReferencia()], Validators.required),
+      referencias: this.fb.array([this.createReferencia()], Validators.required),
       hijos: this.fb.array([this.createHijos()])
     });
   }
@@ -149,10 +149,9 @@ export class EmpleadoComponent implements OnInit {
     console.log(this.formEmpleado.value);
     this.empleadoService.postEmpleado(this.formEmpleado.value).then(resp => {
       console.log('Empleado Guardado');
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('/dashboard/listado');
     }).catch((error: any) => {
-      
-    })
+        })
   }
 
   actualizarEmpleado(){
@@ -195,7 +194,7 @@ export class EmpleadoComponent implements OnInit {
   }
   
   get referencia(){
-    return this.formEmpleado.get('referencia') as FormArray;
+    return this.formEmpleado.get('referencias') as FormArray;
   }
   
   get hijos(){

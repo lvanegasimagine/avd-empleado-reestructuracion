@@ -13,7 +13,7 @@ const routes: Routes = [
     children: [
        { path: '', component: DashboardComponent },
        { path: 'listado', component: ListadoEmpleadoComponent },
-       { path: 'empleado', component: EmpleadoComponent },
+       { path: 'empleados', component: EmpleadoComponent },
        { path: 'empleado/actualizar/:id', component: EmpleadoComponent },
        { path: 'reporte/:id', component: ReporteEmpleadoComponent},
     ]

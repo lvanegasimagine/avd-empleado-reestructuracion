@@ -32,6 +32,7 @@ import { MaterialModule } from './material.module';
     PagesRoutingModule,
     HttpClientModule,
     ReactiveFormsModule
-  ]
+  ],
+  exports:[NavbarComponent]
 })
 export class PagesModule { }
